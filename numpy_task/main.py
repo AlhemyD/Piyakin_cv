@@ -21,7 +21,8 @@ e = np.linspace(0,1,5)
 assert np.all(e == np.array([0., 0.25, 0.5, 0.75, 1.0]))
 
 f = np.arange(5 * 5).reshape(5, 5)
-fc = np.array([[1, 3], [11, 13], [21, 23]]) #???
+fc = f[::2,[1,3]] #DONE
+
 
 assert np.all(fc == np.array([[1, 3], [11, 13], [21, 23]]))
 
@@ -48,7 +49,7 @@ kl = k**l
 assert np.all(kl == np.array([1, 4, 27, 64, 625]))
 
 m = np.array([2, 2, 2, 3, 3, 3])
-mc = 0.5 #???
+mc = m.std() #DONE
 
 assert mc == 0.5
 
